@@ -18,7 +18,7 @@ Python
 
 > Resolução: O código irá verificar se um número inserido pelo usuário está na sequência de Fibonacci. Ele usa uma função para calcular os números de Fibonacci até chegar ao número informado e, depois verifica se esse número está na sequência. O código foi feito por meio de estruturas condiccionais, onde retorna "True" se o número estiver na sequencia e "False" caso contrário.
 
-**Código em Python: Desafio2.py**
+**Código em Python: [Desafio2.py](https://github.com/Luh086/Target-Desafio/blob/d1848f31bf7a7815eb7d4ac6ce2768f68d6920d5/Desafio2.py)**
 
 > **Desafio 3 - Descubra a lógica**
 > Resumo: Responder qual é o próximo número para cada sequência exibida
