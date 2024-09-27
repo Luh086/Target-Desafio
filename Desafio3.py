@@ -1,31 +1,14 @@
-#DESAFIO 3 - Descubra a lógica
+faturamento_diario = [22174.1664, 24537.6698, 0.0, 0.0, 26742.6612, 0.0, 42889.2258, 46251.174, 11191.4722, 0.0, 0.0, 3847.4823, 373.7838, 2659.7563, 48924.2448, 18419.2614, 0.0, 0.0, 35240.1826, 43829.1667, 18235.6852, 4355.0662, 13327.1025, 0.0, 0.0, 25681.8318, 1718.1221, 13220.495, 8414.61]
 
-# letra a)
-sequencia_a = [1, 3, 5, 7]
-elemento_a = sequencia_a[-1] + 2
-print("Na letra A, o próximo elemento da sequência é:", elemento_a )
+menor_faturamento = min(filter(lambda x: x > 0, faturamento_diario))
 
-# letra b)
-sequencia_b = [2, 4, 8, 16, 32, 64]
-elemento_b  = sequencia_b[-1] * 2
-print("Na letra B, o próximo elemento da sequência é:", elemento_b)
+maior_faturamento = max(faturamento_diario)
 
-# letra c)
-sequencia_c = [0, 1, 4, 9, 16, 25, 36]
-elemento_c  = sequencia_c[-1] + len(sequencia_c)**2
-print("Na letra C, o próximo elemento da sequência é:", elemento_c )
+dias_validos = [f for f in faturamento_diario if f > 0]
+media_mensal = sum(dias_validos) / len(dias_validos)
 
-# letra d)
-sequencia_d = [4, 16, 36, 64]
-elemento_d = (len(sequencia_d) + 1)**2
-print("Na letra D, o próximo elemento da sequência é:", elemento_d)
+dias_acima_media = sum(1 for f in faturamento_diario if f > media_mensal)
 
-# letra e)
-sequencia_e = [1, 1, 2, 3, 5, 8]
-elemento_e = sequencia_e[-1] + sequencia_e[-2]
-print("Na letra E, o próximo elemento da sequência é:", elemento_e)
-
-# letra f)
-sequencia_f = [2, 10, 12, 16, 17, 18, 19]
-elemento_f  = sequencia_f[-1] + 181
-print("Na letra F, o próximo elemento da sequência é:", elemento_f)
+print(f"Menor faturamento: {menor_faturamento}")
+print(f"Maior faturamento: {maior_faturamento}")
+print(f"Dias com faturamento acima da média: {dias_acima_media}")
